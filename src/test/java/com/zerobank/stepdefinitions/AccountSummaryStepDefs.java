@@ -2,9 +2,11 @@ package com.zerobank.stepdefinitions;
 
 import com.zerobank.pages.AccountSummaryPage;
 import com.zerobank.utilities.BrowserUtils;
+import com.zerobank.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 
 import java.util.List;
 
@@ -22,5 +24,7 @@ public class AccountSummaryStepDefs {
         List<String> actualColumns = BrowserUtils.getElementsText(accountSummaryPage.actualColumnNames);
         Assert.assertEquals("Column names do not match", expectedColumns,actualColumns);
     }
+
+
 
 }

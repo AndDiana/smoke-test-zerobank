@@ -37,6 +37,8 @@ public class AccountActivityStepDefs {
     public void transactionsTableShouldHaveColumnNames(List<String> expectedColumns) {
         List<String> actualColumns = BrowserUtils.getElementsText(accountActivityPage.accountColumnNames);
         Assert.assertEquals("columns do not match",expectedColumns,actualColumns);
+        
+        
     }
 
     @And("if user clicks on {string} link at AccountSummary Page")
